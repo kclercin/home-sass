@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import bowArrow from '../assets/bow-arrow.svg';
 interface HoroscopeData {
   sign: string;
   date: string;
@@ -122,18 +122,22 @@ const Horoscope: React.FC = () => {
         </div>
         
         {horoscopeData && (
-          <>
-            <p className="text-sm text-gray-700 leading-relaxed">
-              {horoscopeData.horoscope}
-            </p>
-            
-            <div className="grid grid-cols-2 gap-2 mt-3 text-xs">
-              <div className="bg-white/20 rounded p-2">
-                <p className="font-semibold text-gray-600">Humeur</p>
-                <p className="text-gray-700">{horoscopeData.mood}</p>
+          <div className="flex items-start gap-8">
+            <div className="flex items-center justify-center">
+              <img src={bowArrow} alt="bow-arrow" className="w-20 h-20 fill-gray-700" />
+            </div>
+            <div>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                {horoscopeData.horoscope}
+              </p>
+              <div className="grid grid-cols-2 gap-2 mt-3 text-xs">
+                <div className="bg-white/20 rounded p-2">
+                  <p className="font-semibold text-gray-600">Humeur</p>
+                  <p className="text-gray-700">{horoscopeData.mood}</p>
+                </div>
               </div>
             </div>
-          </>
+          </div>
         )}
       </div>
     </div>
