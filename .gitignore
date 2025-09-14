@@ -26,3 +26,6 @@ dist-ssr
 
 #Ignore cursor AI rules
 .cursor/rules/codacy.mdc
+
+# Local Netlify folder
+.netlify

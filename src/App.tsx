@@ -33,9 +33,7 @@ function App() {
             <div className="col-span-8">
               <div className="flex gap-4 flex-col">
                 <div className="flex">
-                  <Card level="lg">
-                    <Horoscope />
-                  </Card>
+                  <QuoteOfTheDay />
                 </div>
                 <div className="flex">
                   <Card level="lg">
@@ -46,7 +44,9 @@ function App() {
             </div>
             <div className="col-span-10">
               <div className="flex">
-                <QuoteOfTheDay />
+                <Card level="lg">
+                  <Horoscope />
+                </Card>
               </div>
             </div>
           </div>

@@ -1,13 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import bowArrow from '../assets/bow-arrow.svg';
 interface HoroscopeData {
-  sign: string;
+  response: Record<string, {
+    score: number;
+    split_response: string;
+  }>;
   date: string;
-  horoscope: string;
-  mood: string;
-  color: string;
-  lucky_number: string;
-  lucky_time: string;
+}
+
+// En affichant votre sourire, vous répandez du bonheur dans la journée de quelqu'un, transformant des moments ordinaires en souvenirs extraordinaires.
+
+const horoscopeTypes = {
+  career: {
+    title: "Carrière",
+  },
+  finances: {
+    title: "Finances",
+  },
+  health: {
+    title: "Santé",
+  },
+  physique: {
+    title: "Physique",
+  },
+  status: {
+    title: "Statut",
+  },
+  total_score: {
+    title: "Global",
+  }
 }
 
 const Horoscope: React.FC = () => {
@@ -22,8 +43,9 @@ const Horoscope: React.FC = () => {
         setError('');
         
         // Vérifier si l'horoscope du jour est déjà en cache
+        // extract the date in the format DD/MM/YYYY
         const today = new Date().toLocaleDateString('fr-FR');
-        const cachedHoroscope = localStorage.getItem('horoscope_capricorn');
+        const cachedHoroscope = localStorage.getItem('horoscope_sagittarius');
         
         if (cachedHoroscope) {
           const parsedData = JSON.parse(cachedHoroscope);
@@ -35,41 +57,27 @@ const Horoscope: React.FC = () => {
           }
         }
         
-        // Appel à l'API VedicAstroAPI pour le Capricorne
-        const response = await fetch('https://vedicastroapi.com/horoscope/daily?sign=capricorn&date=today');
+        // Appel à l'API VedicAstroAPI pour le Sagittarius
+        const response = await fetch(`https://api.vedicastroapi.com/v3-json/western/daily-horoscope?zodiac=9&date=${today}&api_key=05f36bc9-b650-5c5f-84cf-1cf66b8e42cc&lang=fr&split=true&type=big`);
         
         if (!response.ok) {
           throw new Error(`Erreur API: ${response.status}`);
         }
         
         const data = await response.json();
+        console.log(data);
         
         // Ajouter la date actuelle aux données
         const horoscopeWithDate = {
-          ...data,
+          response: data?.response?.bot_response,
           date: today
         };
-        
         // Stocker dans le localStorage
-        localStorage.setItem('horoscope_capricorn', JSON.stringify(horoscopeWithDate));
+        localStorage.setItem('horoscope_sagittarius', JSON.stringify(horoscopeWithDate));
         
         setHoroscopeData(horoscopeWithDate);
       } catch (err) {
         console.error('Erreur lors de la récupération de l\'horoscope:', err);
-        setError('Impossible de charger l\'horoscope');
-        // Données de fallback en cas d'erreur
-        const fallbackData = {
-          sign: 'Capricorne',
-          date: new Date().toLocaleDateString('fr-FR'),
-          horoscope: 'Les étoiles vous sourient aujourd\'hui ! Votre détermination et votre persévérance vous mèneront vers le succès.',
-          mood: 'Déterminé',
-          color: 'Marron',
-          lucky_number: '8',
-          lucky_time: '14h-16h'
-        };
-        setHoroscopeData(fallbackData);
-        // Stocker aussi les données de fallback
-        localStorage.setItem('horoscope_capricorn', JSON.stringify(fallbackData));
       } finally {
         setLoading(false);
       }
@@ -112,12 +120,7 @@ const Horoscope: React.FC = () => {
         <div className="flex items-center gap-2">
           <span className="text-lg">🔮</span>
           <p className="text-lg font-semibold text-gray-700">
-            Horoscope du jour
-            {horoscopeData && (
-            <span className="text-sm text-gray-600 mb-2">
-                &nbsp;-&nbsp;{horoscopeData.date}
-              </span>
-            )}
+            Horoscope
           </p>
         </div>
         
@@ -126,16 +129,20 @@ const Horoscope: React.FC = () => {
             <div className="flex items-center justify-center">
               <img src={bowArrow} alt="bow-arrow" className="w-20 h-20 fill-gray-700" />
             </div>
-            <div>
-              <p className="text-sm text-gray-700 leading-relaxed">
-                {horoscopeData.horoscope}
-              </p>
-              <div className="grid grid-cols-2 gap-2 mt-3 text-xs">
-                <div className="bg-white/20 rounded p-2">
-                  <p className="font-semibold text-gray-600">Humeur</p>
-                  <p className="text-gray-700">{horoscopeData.mood}</p>
-                </div>
-              </div>
+            <div className="space-y-2">
+              {Object.keys(horoscopeTypes).filter((type) => horoscopeData.response[type]).map((type) => {
+                const typeData = horoscopeTypes[type as keyof typeof horoscopeTypes];
+                return (
+                  <div key={typeData.title}>
+                    <h3 className="text-sm text-gray-700 leading-relaxed font-semibold">
+                      {typeData.title}
+                    </h3>
+                    <p className="text-sm text-gray-700 leading-relaxed">
+                      {horoscopeData.response[type].split_response}
+                    </p>
+                  </div>
+                )
+              })}
             </div>
           </div>
         )}
