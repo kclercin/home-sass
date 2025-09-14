@@ -34,16 +34,6 @@ const ChristmasTimer: React.FC = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const getMessage = () => {
-    if (nightsUntilChristmas === 0) {
-      return "🎄 C'est Noël ! 🎄";
-    } else if (nightsUntilChristmas === 1) {
-      return "🎅 Plus qu'une nuit avant Noël !";
-    } else {
-      return `🌙 ${nightsUntilChristmas} nuits avant Noël`;
-    }
-  };
-
   return (
     <div className="">
       <div className="space-y-2">
