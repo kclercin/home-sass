@@ -52,7 +52,7 @@ const QuoteOfTheDay: React.FC = () => {
         <div className="mb-0">
           <h2 className="text-lg font-semibold text-gray-700">Le savais-tu ?</h2>
         </div>
-        
+
         <div className="">
           <blockquote className="text-lg italic text-gray-900 leading-relaxed">
             {currentQuote.citation}

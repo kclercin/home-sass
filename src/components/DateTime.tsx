@@ -31,10 +31,10 @@ const DateTime: React.FC = () => {
   return (
     <div className="">
       <div className="space-y-2">
-        <p className="text-lg font-semibold text-gray-700">
+        <p className="text-lg font-semibold text-gray-700" >
           {formatDate(currentDateTime).toLocaleUpperCase()}
         </p>
-        <p className="text-2xl font-mono font-bold text-pink-600">
+        <p className="text-2xl font-bold text-pink-600">
           {formatTime(currentDateTime)}
         </p>
       </div>
