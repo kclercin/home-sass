@@ -152,6 +152,7 @@ const Weather: React.FC = () => {
         
         // Stocker dans le localStorage avec la date
         const weatherWithDate: WeatherDayData = {
+          // @ts-ignore
           date: today.toLocaleDateString('fr-FR'),
           periods: periods,
           location: { latitude, longitude },

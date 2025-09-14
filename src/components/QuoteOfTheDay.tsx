@@ -14,7 +14,11 @@ const QuoteOfTheDay: React.FC = () => {
   const quotes: Quote[] = [
     {
       date: "2025-09-14",
-      citation: "La vie est ce qui arrive pendant que vous êtes occupé à faire d'autres projets."
+      citation: "En 1995, le film Dilwale Dulhania Le Jayenge a redonné un souffle au cinéma indien. Devenu absolument culte, il est encore projeté plus de 25 ans (en 2022) après sa sortie au cinéma Maratha Mandir de Bombay."
+    },
+    {
+      date: "2025-09-15",
+      citation: "En 1995, le film Dilwale Dulhania Le Jayenge a redonné un souffle au cinéma indien. Devenu absolument culte, il est encore projeté plus de 25 ans (en 2022) après sa sortie au cinéma Maratha Mandir de Bombay."
     },
   ];
 
