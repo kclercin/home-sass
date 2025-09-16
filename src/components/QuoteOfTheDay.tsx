@@ -20,6 +20,10 @@ const QuoteOfTheDay: React.FC = () => {
       date: "2025-09-15",
       citation: "En 1995, le film Dilwale Dulhania Le Jayenge a redonné un souffle au cinéma indien. Devenu absolument culte, il est encore projeté plus de 25 ans (en 2022) après sa sortie au cinéma Maratha Mandir de Bombay."
     },
+    {
+      date: "2025-09-16",
+      citation: 'La chanson "The lion sleeps tonight" a été créée en Afrique du sud en 1939 par Solomon Linda sous le nom de "Mbube", nous pouvions entendre les coeurs répéter "Uyimbube, uyimbube", ce qui veut dire "Tu es un lion". Lors de l\'exportation de cette chanson, uyimbube s\'est transformé en "awimoweh" qui ne veut rien dire. La chanson a été rendu célébre en 1960 par le groupe The Tokens.'
+    }
   ];
 
   // Fonction pour obtenir la citation du jour basée sur la date actuelle
