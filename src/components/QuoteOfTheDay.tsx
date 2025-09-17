@@ -26,7 +26,7 @@ const QuoteOfTheDay: React.FC = () => {
     },
     {
       date: "2025-09-17",
-      citation: "Dans les années fin 80, l'actrice Sophie Lloyd rêve d’entrer dans le prestigieuse société Magic circle, une société de magiciens située à Londres, réputée ses critères d’admission stricts… réservés jusqu’alors aux hommes. Pour contourner cette règle, elle se fait passer pour un homme et intègre la société, mais lorsque cette dernière autorise finalement l'intégration des femmes, l'actrice révèle son secret et les responsables étant vexés de la supercherie, elle est expulsée de la société. Elle a cépendant récemment été réintégrée, avec les excuses officielles. :)"
+      citation: "Dans les années fin 80, l'actrice Sophie Lloyd rêve d’entrer dans le prestigieuse société Magic circle, une société de magiciens située à Londres, réputée ses critères d’admission stricts… réservés jusqu’alors aux hommes. Pour contourner cette règle, elle se fait passer pour un homme et intègre la société, mais lorsque cette dernière autorise finalement l'intégration des femmes, l'actrice révèle son secret et les responsables étant vexés de la supercherie, elle est expulsée de la société. Elle a cependant été réintégrée récemment, avec les excuses officielles. :)"
     }
   ];
 
