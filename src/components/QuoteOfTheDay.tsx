@@ -30,7 +30,7 @@ const QuoteOfTheDay: React.FC = () => {
     },
     {
       date: "2025-09-18",
-      citation: "Pour la sortie international de Terminator 2, Arnold Schwarzenegger souhaitait doubler son propre rôle en allemand, mais le studio a refusé a cause de son accent jugé trop rural. Le studio jugé qu'il serait étrange qu'une machine de guerre meutriière est activé le module Ch'ti."
+      citation: "Pour la sortie international de Terminator 2, Arnold Schwarzenegger souhaitait doubler son propre rôle en allemand, mais le studio a refusé a cause de son accent jugé trop rural. Le studio jugé qu'il serait étrange qu'une machine de guerre meutrière parle comme un redneck."
     }
   ];
 
