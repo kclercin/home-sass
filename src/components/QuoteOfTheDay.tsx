@@ -27,6 +27,10 @@ const QuoteOfTheDay: React.FC = () => {
     {
       date: "2025-09-17",
       citation: "Dans les années fin 80, l'actrice Sophie Lloyd rêve d’entrer dans le prestigieuse société Magic circle, une société de magiciens située à Londres, réputée ses critères d’admission stricts… réservés jusqu’alors aux hommes. Pour contourner cette règle, elle se fait passer pour un homme et intègre la société, mais lorsque cette dernière autorise finalement l'intégration des femmes, l'actrice révèle son secret et les responsables étant vexés de la supercherie, elle est expulsée de la société. Elle a cependant été réintégrée récemment, avec les excuses officielles. :)"
+    },
+    {
+      date: "2025-09-18",
+      citation: "Pour la sortie international de Terminator 2, Arnold Schwarzenegger souhaitait doubler son propre rôle en allemand, mais le studio a refusé a cause de son accent jugé trop rural. Le studio jugé qu'il serait étrange qu'une machine de guerre meutriière est activé le module Ch'ti."
     }
   ];
 
