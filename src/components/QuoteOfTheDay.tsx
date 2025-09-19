@@ -31,6 +31,10 @@ const QuoteOfTheDay: React.FC = () => {
     {
       date: "2025-09-18",
       citation: "Pour la sortie international de Terminator 2, Arnold Schwarzenegger souhaitait doubler son propre rôle en allemand, mais le studio a refusé a cause de son accent jugé trop rural. Le studio jugé qu'il serait étrange qu'une machine de guerre meutrière parle comme un redneck."
+    },
+    {
+      date: "2025-09-19",
+      citation: "En 2013, une Californienne a attendu à volontairement giflé un député du sheriff (?), car elle voulait aller en prison pour pouvoir arrêter de fumer. Elle s'est dit que la prison était le seule moyen d'arrêter de fumer car le tabac y est interdit, elle a écopée de 63 jours de prison."
     }
   ];
 
