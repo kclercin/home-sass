@@ -34,7 +34,7 @@ const QuoteOfTheDay: React.FC = () => {
     },
     {
       date: "2025-09-19",
-      citation: "En 2013, une Californienne a attendu à volontairement giflé un député du sheriff (?), car elle voulait aller en prison pour pouvoir arrêter de fumer. Elle s'est dit que la prison était le seule moyen d'arrêter de fumer car le tabac y est interdit, elle a écopée de 63 jours de prison."
+      citation: "En 2013, une Californienne a attendu devant une prison d'état afin giflé un adjoint du sheriff, car elle voulait aller en prison pour pouvoir arrêter de fumer après s'etre dit que c'était le seul moyen car le tabac était interdit à l'intérieur, elle a écopée de 63 jours de prison."
     }
   ];
 
